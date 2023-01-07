@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <TextView
+        android:id="@+id/text_view"
+        style="@style/Text1_16"
+        android:textColor="?colorOnSurfaceHigh"
+        android:lineSpacingExtra="@dimen/dimen_4"
+        android:paddingTop="@dimen/dimen_12"
+        android:paddingHorizontal="@dimen/dimen_18"
+        android:paddingBottom="@dimen/dimen_24"
+        android:text="ddddd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </TextView>
+</layout>

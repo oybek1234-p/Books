@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginHorizontal="@dimen/dimen_2"
+        android:clipToPadding="false"
+        android:layout_width="130dp"
+        android:padding="@dimen/dimen_6"
+        android:foreground="?selectableItemBackground"
+        android:background="?selectableItemBackground"
+        android:layout_height="wrap_content">
+
+        <com.uz.kitoblar.ui.fragments.ImageViewLoader
+            android:id="@+id/photo_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1.3"
+            android:background="@drawable/radius_12"
+            android:backgroundTint="?colorBackground"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/title_view"
+            style="@style/Text1_14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginStart="@dimen/dimen_4"
+            android:text="Throne one sitting reads"
+            android:textColor="?colorOnSurfaceHigh"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/photo_view"
+            app:layout_constraintTop_toBottomOf="@+id/photo_view" />
+
+        <ImageView
+            android:id="@+id/play_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/oval_drawable"
+            android:backgroundTint="#16000000"
+            android:src="@drawable/ic_play"
+            android:elevation="@dimen/dimen_4"
+            android:layout_margin="@dimen/dimen_12"
+            app:layout_constraintBottom_toBottomOf="@+id/photo_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="?colorSurface" />
+
+        <TextView
+            android:id="@+id/info_view"
+            style="@style/Caption2_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?colorOnSurfaceLow"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintStart_toStartOf="@+id/title_view"
+            app:layout_constraintTop_toBottomOf="@+id/title_view" />
+
+        <TextView
+            android:id="@+id/part_view"
+            style="@style/Subtitle2_14"
+            android:layout_width="match_parent"
+            android:gravity="start|bottom"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            android:background="@drawable/radius_12"
+            android:backgroundTint="#27000000"
+            android:padding="@dimen/dimen_12"
+            android:text="4 qism"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/photo_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

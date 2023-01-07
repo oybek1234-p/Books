@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.github.barteksc.pdfviewer.PDFView
+            android:id="@+id/render_view"
+            android:background="?colorBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/right_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/oval_drawable"
+            android:backgroundTint="#65000000"
+            android:padding="@dimen/dimen_12"
+            android:src="@drawable/arrow_right"
+            android:layout_margin="@dimen/dimen_18"
+            android:foreground="?selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="#FFFFFF" />
+
+        <ImageView
+            android:id="@+id/left_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_18"
+            android:background="@drawable/oval_drawable"
+            android:backgroundTint="#65000000"
+            android:padding="@dimen/dimen_12"
+            android:src="@drawable/arrow_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/page_countv"
+            style="@style/Text2_15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radius_12"
+            android:gravity="center"
+            android:backgroundTint="#65000000"
+            android:paddingHorizontal="@dimen/dimen_8"
+            android:paddingVertical="@dimen/dimen_4"
+            android:text="14 bet"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/right_button"
+            app:layout_constraintEnd_toStartOf="@+id/right_button"
+            app:layout_constraintStart_toEndOf="@+id/left_button"
+            app:layout_constraintTop_toTopOf="@+id/left_button" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

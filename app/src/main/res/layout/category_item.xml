@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="?colorSurface"
+        android:paddingVertical="@dimen/dimen_12"
+        android:paddingHorizontal="@dimen/dimen_18"
+        android:layout_height="wrap_content">
+
+        <com.uz.kitoblar.ui.fragments.ImageViewLoader
+            android:id="@+id/photo_view"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/oval_drawable"
+            android:backgroundTint="?colorBackground"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name_view"
+            style="@style/Text1_16"
+            android:textSize="17sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fantastika"
+            android:layout_marginStart="@dimen/dimen_18"
+            android:textColor="?colorOnSurfaceHigh"
+            app:layout_constraintBottom_toBottomOf="@+id/photo_view"
+            app:layout_constraintStart_toEndOf="@+id/photo_view"
+            app:layout_constraintTop_toTopOf="@+id/photo_view" />
+
+        <CheckBox
+            android:id="@+id/check_box"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

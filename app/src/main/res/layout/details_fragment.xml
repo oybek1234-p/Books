@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/container_l"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dimen_8"
+            android:paddingBottom="120dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/dimen_12"
+                android:paddingTop="@dimen/dimen_12"
+                android:paddingHorizontal="@dimen/dimen_12">
+
+                <TextView
+                    android:id="@+id/mundarija_button"
+                    style="@style/Caption2_12"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_12"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_8"
+                    android:background="@drawable/radius_12"
+                    android:backgroundTint="#B0F1F1F1"
+                    android:padding="@dimen/dimen_6"
+                    android:text="Mundarija"
+                    android:textColor="?colorOnSurfaceMedium"
+                    app:layout_constraintBottom_toTopOf="@+id/type_view"
+                    app:layout_constraintStart_toEndOf="@+id/photo_view" />
+
+                <ProgressBar
+                    android:id="@+id/progess_bar"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="?colorSurface"
+                    android:elevation="6dp"
+                    android:padding="170dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/about_more"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.506"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.uz.kitoblar.ui.fragments.ImageViewLoader
+                    android:id="@+id/photo_view"
+                    android:layout_width="140dp"
+                    android:layout_height="0dp"
+                    android:background="?colorBackground"
+                    android:elevation="@dimen/dimen_4"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintDimensionRatio="1:1.4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/type_view"
+                    style="@style/Caption2_12"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radius_12"
+                    android:backgroundTint="?colorBackground"
+                    android:drawablePadding="@dimen/dimen_12"
+                    android:visibility="gone"
+                    android:layout_marginStart="@dimen/dimen_12"
+                    android:paddingVertical="@dimen/dimen_4"
+                    android:paddingHorizontal="@dimen/dimen_12"
+                    android:text=""
+                    android:textColor="?colorOnSurfaceMedium"
+                    app:layout_constraintBottom_toBottomOf="@+id/photo_view"
+                    app:layout_constraintStart_toEndOf="@+id/photo_view" />
+                <SeekBar
+                    android:id="@+id/seek_bar"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_28"
+                    android:elevation="@dimen/dimen_4"
+                    android:paddingHorizontal="0dp"
+                    android:paddingVertical="@dimen/dimen_8"
+                    android:layout_marginTop="@dimen/dimen_12"
+                    android:progress="50"
+                    android:progressBackgroundTint="#716F73"
+                    android:progressTint="?colorPrimary"
+                    android:thumbTint="?colorPrimary"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/time_view"
+                    app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:elevation="@dimen/dimen_4"
+                    android:indeterminateTint="@color/white"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/playing_view"
+                    app:layout_constraintEnd_toEndOf="@+id/playing_view"
+                    app:layout_constraintTop_toTopOf="@+id/playing_view" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/playing_view"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="@dimen/dimen_12"
+                    android:elevation="@dimen/dimen_4"
+                    android:tint="@color/white"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/photo_view"
+                    app:layout_constraintEnd_toEndOf="@+id/photo_view" />
+
+                <TextView
+                    android:id="@+id/part_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_8"
+                    android:background="@drawable/radius_12"
+                    android:backgroundTint="#8A000000"
+                    android:elevation="4dp"
+                    style="@style/Subtitle2_14"
+                    android:visibility="gone"
+                    android:paddingHorizontal="@dimen/dimen_8"
+                    android:paddingVertical="@dimen/dimen_2"
+                    android:text="4 qism"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/photo_view"
+                    app:layout_constraintStart_toStartOf="@+id/photo_view" />
+
+                <TextView
+                    android:id="@+id/about_more"
+                    style="@style/Text2_15"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radius_12"
+                    android:backgroundTint="?colorBackground"
+                    android:ellipsize="end"
+                    android:layout_marginTop="@dimen/dimen_12"
+                    android:foreground="?selectableItemBackground"
+                    android:lineSpacingExtra="@dimen/dimen_2"
+                    android:maxLines="2"
+                    android:padding="@dimen/dimen_12"
+                    android:textColor="?colorOnSurfaceHigh"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/types_recycler_view"
+                    app:layout_goneMarginTop="@dimen/dimen_12" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textSize="20dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:layout_marginTop="@dimen/dimen_12"
+                    android:text="Boy ota kambagal ota"
+                    android:textColor="?colorOnSurfaceHigh"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/photo_view"
+                    app:layout_constraintTop_toBottomOf="@+id/photo_view" />
+
+                <TextView
+                    android:id="@+id/offline_sign"
+                    style="@style/Text1_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_margin="@dimen/dimen_12"
+                    android:background="@drawable/radius_12"
+                    android:backgroundTint="#86000000"
+                    android:elevation="@dimen/dimen_4"
+                    android:fontFamily="@font/open_sans_semi_bold"
+                    android:paddingHorizontal="@dimen/dimen_18"
+                    android:paddingVertical="@dimen/dimen_4"
+                    android:text="Offline"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="@+id/photo_view"
+                    app:layout_constraintStart_toStartOf="@+id/photo_view" />
+
+                <TextView
+                    android:id="@+id/cat_view"
+                    style="@style/Subtitle2_14"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_4"
+                    android:elevation="@dimen/dimen_4"
+                    android:textColor="?colorPrimary"
+                    app:layout_constraintStart_toStartOf="@+id/textView12"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_18"
+                    app:layout_constraintTop_toBottomOf="@+id/seek_bar"
+                    tools:layout_editor_absoluteX="12dp">
+
+                    <TextView
+                        android:id="@+id/play_button"
+                        style="@style/Subtitle2_14"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="@dimen/dimen_12"
+                        android:animateLayoutChanges="true"
+                        android:background="@drawable/radius_12"
+                        android:backgroundTint="?colorPrimary"
+                        android:drawableTop="@drawable/ic_play"
+                        android:drawablePadding="@dimen/dimen_18"
+                        android:drawableTint="?colorOnPrimary"
+                        android:foreground="?selectableItemBackground"
+                        android:gravity="start|center_vertical"
+                        android:paddingHorizontal="@dimen/dimen_28"
+                        android:paddingVertical="@dimen/dimen_8"
+                        android:textAllCaps="false"
+                        android:textColor="?colorOnPrimary"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/read_button"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/read_button"
+                        style="@style/Subtitle2_14"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="true"
+                        android:background="@drawable/radius_12"
+                        android:backgroundTint="?colorPrimary"
+                        android:foreground="?selectableItemBackground"
+                        android:gravity="center"
+                        android:maxWidth="160dp"
+                        android:paddingVertical="@dimen/dimen_10"
+                        android:text="O'qish"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/play_button"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/pdf_progress_bar"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimen_12"
+                        android:layout_marginHorizontal="@dimen/dimen_8"
+                        android:layout_marginTop="@dimen/dimen_8"
+                        app:layout_constraintEnd_toEndOf="@+id/read_button"
+                        app:layout_constraintStart_toStartOf="@+id/read_button"
+                        app:layout_constraintTop_toBottomOf="@+id/read_button"
+                        app:trackCornerRadius="@dimen/dimen_8"
+                        app:trackThickness="@dimen/dimen_8" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/info_view"
+                    style="@style/Subtitle3_13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dimen_8"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:text="-"
+                    android:layout_marginStart="@dimen/dimen_12"
+                    android:textColor="?colorOnSurfaceMedium"
+                    app:drawableTint="?colorOnSurfaceMedium"
+                    app:layout_constraintBottom_toBottomOf="@+id/cat_view"
+                    app:layout_constraintStart_toEndOf="@+id/cat_view"
+                    app:layout_constraintTop_toTopOf="@+id/cat_view" />
+
+                <HorizontalScrollView
+                    android:id="@+id/scrollView2"
+                    android:layout_width="match_parent"
+                    android:scrollbarSize="0dp"
+                    android:layout_marginTop="@dimen/dimen_18"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/dimen_12"
+                    android:paddingBottom="@dimen/dimen_4"
+                    android:backgroundTint="?colorSurface"
+                    android:elevation="1dp"
+                    android:paddingStart="@dimen/dimen_8"
+                    android:background="@drawable/radius_12"
+                    app:layout_constraintTop_toBottomOf="@+id/cat_view">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:animateLayoutChanges="true"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/heart_view"
+                            style="@style/Caption2_12"
+                            android:layout_width="70dp"
+                            android:layout_height="60dp"
+                            android:animateLayoutChanges="true"
+                            android:clickable="true"
+                            android:drawablePadding="@dimen/dimen_2"
+                            android:focusable="true"
+                            android:visibility="gone"
+                            android:gravity="center"
+                            android:paddingHorizontal="@dimen/dimen_4"
+                            android:paddingEnd="@dimen/dimen_6"
+                            android:stateListAnimator="@animator/item_press"
+                            android:text="ta yoqdi"
+                            android:textColor="?colorOnSurfaceHigh"
+                            app:drawableTint="?attr/colorOnSurfaceLow"
+                            app:drawableTopCompat="@drawable/outline_favorite_24" />
+
+                        <TextView
+                            android:id="@+id/share_view"
+                            style="@style/Subtitle3_13"
+                            android:layout_width="70dp"
+                            android:layout_height="60dp"
+                            android:animateLayoutChanges="true"
+                            android:clickable="true"
+                            android:layout_marginStart="@dimen/dimen_4"
+                            android:maxLines="1"
+                            android:gravity="center"
+                            android:ellipsize="end"
+                            android:drawableTop="@drawable/ic_reshare"
+                            android:drawablePadding="@dimen/dimen_2"
+                            android:focusable="true"
+                            android:stateListAnimator="@animator/item_press"
+                            android:text="Ulashish"
+                            android:textColor="?colorOnSurfaceMedium"
+                            app:drawableTint="?colorOnSurfaceMedium" />
+                        <TextView
+                            android:id="@+id/add_book_botton"
+                            style="@style/Subtitle3_13"
+                            android:layout_width="80dp"
+                            android:layout_height="60dp"
+                            android:animateLayoutChanges="true"
+                            android:clickable="true"
+                            android:layout_marginStart="@dimen/dimen_4"
+                            android:drawableTop="@drawable/add_book_ic"
+                            android:drawablePadding="@dimen/dimen_2"
+                            android:focusable="true"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:stateListAnimator="@animator/item_press"
+                            android:text="Kutubxonaga qo'shish"
+                            android:textColor="?colorOnSurfaceMedium"
+                            app:drawableTint="?colorOnSurfaceMedium"
+                            />
+                        <TextView
+                            android:id="@+id/download_view"
+                            style="@style/Subtitle3_13"
+                            android:layout_width="70dp"
+                            android:layout_height="60dp"
+                            android:clickable="true"
+                            android:layout_marginStart="@dimen/dimen_4"
+                            android:drawableTop="@drawable/ic_download"
+                            android:drawablePadding="@dimen/dimen_2"
+                            android:focusable="true"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:stateListAnimator="@animator/item_press"
+                            android:text="Ko'chirish"
+                            android:textColor="?colorOnSurfaceMedium"
+                            app:drawableTint="?colorOnSurfaceMedium" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/download_container"
+                            android:layout_width="70dp"
+                            android:layout_height="60dp"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_marginStart="@dimen/dimen_4"
+                            android:foreground="?selectableItemBackground"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="@+id/download_view"
+                            app:layout_constraintEnd_toEndOf="@+id/download_view"
+                            app:layout_constraintStart_toStartOf="@+id/download_view"
+                            app:layout_constraintTop_toTopOf="@+id/download_view">
+
+                            <com.google.android.material.progressindicator.CircularProgressIndicator
+                                android:id="@+id/download_progress_view"
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content"
+                                android:indeterminate="false"
+                                android:progress="50"
+                                app:indicatorSize="30dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:trackColor="?colorBackground"
+                                app:trackThickness="@dimen/dimen_2" />
+
+                            <TextView
+                                android:id="@+id/size_view"
+                                style="@style/Caption1_13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0%"
+                                android:textColor="?colorOnSurfaceLow"
+                                app:layout_constraintBottom_toBottomOf="@+id/download_progress_view"
+                                app:layout_constraintEnd_toEndOf="@+id/download_progress_view"
+                                app:layout_constraintStart_toStartOf="@+id/download_progress_view"
+                                app:layout_constraintTop_toTopOf="@+id/download_progress_view" />
+
+                            <TextView
+                                android:id="@+id/downloading_text_view"
+                                style="@style/Subtitle3_13"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Ko'chirilmoqda"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:textColor="?colorOnSurfaceMedium"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/download_progress_view" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <TextView
+                            android:id="@+id/add_launcher_button"
+                            style="@style/Subtitle3_13"
+                            android:layout_width="90dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/dimen_4"
+                            android:animateLayoutChanges="true"
+                            android:clickable="true"
+                            android:paddingVertical="@dimen/dimen_4"
+                            android:drawableTop="@drawable/app_shortcut_ic"
+                            android:drawablePadding="@dimen/dimen_2"
+                            android:ellipsize="end"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:paddingHorizontal="@dimen/dimen_4"
+                            android:stateListAnimator="@animator/item_press"
+                            android:text="Bosh ekranga qo'shish"
+                            android:textColor="?colorOnSurfaceMedium"
+                            app:drawableTint="?colorOnSurfaceMedium" />
+
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/types_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/dimen_12"
+                    android:paddingVertical="4dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+                    tools:layout_editor_absoluteX="12dp"
+                    tools:listitem="@layout/book_type_choose" />
+                <TextView
+                    android:id="@+id/time_view"
+                    style="@style/Caption2_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="1dp"
+                    android:background="@drawable/radius_12"
+                    android:paddingVertical="@dimen/dimen_4"
+                    android:paddingHorizontal="@dimen/dimen_8"
+                    android:backgroundTint="?colorSurface"
+                    android:textColor="#817E7E"
+                    app:layout_constraintBottom_toBottomOf="@+id/seek_bar"
+                    app:layout_constraintStart_toStartOf="@+id/photo_view"
+                    app:layout_constraintTop_toTopOf="@+id/seek_bar" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dimen_2"
+                android:background="?colorBackground" />
+
+            <TextView
+                style="@style/Headline3_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:layout_marginHorizontal="@dimen/dimen_18"
+                android:text="Sotuvchi"
+                android:foreground="?selectableItemBackground"
+                android:drawableEnd="@drawable/arrow_right"
+                android:textColor="?colorOnSurfaceHigh" />
+
+            <include layout="@layout/comments_layout"
+                android:id="@+id/seller_lay"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="?colorBackground" />
+            <TextView
+                android:id="@+id/more_title"
+                style="@style/Headline3_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:layout_marginStart="@dimen/dimen_18"
+
+                android:text="O'xshash kitoblar"
+                android:visibility="gone"
+                android:textColor="?colorOnSurfaceHigh" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/empty_more"
+                android:layout_gravity="center"
+                android:layout_marginVertical="@dimen/dimen_12"
+                android:visibility="gone"
+                android:text="Oxshash kitoblar topilmadi"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:clipToPadding="false"
+                android:visibility="gone"
+                android:nestedScrollingEnabled="false"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/dimen_4"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/book_item_medium" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="@dimen/dimen_2"
+                android:background="?colorBackground" />
+
+            <TextView
+                style="@style/Headline2_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:visibility="gone"
+                android:layout_marginHorizontal="@dimen/dimen_18"
+                android:text="Kitobni baxolash"
+                android:textColor="?colorOnSurfaceHigh" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:clipToPadding="false"
+                android:layout_marginHorizontal="@dimen/dimen_18"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rating_text_view"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:text="3.2"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="24sp"
+                    android:textColor="?colorOnSurfaceLow"
+                    />
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:progressTint="#7A7A7A"
+                    android:numStars="5"
+                    android:layout_gravity="center"
+                    android:stepSize="1"
+                    android:layout_marginStart="@dimen/dimen_8"
+                    android:id="@+id/rating"
+                    android:progressBackgroundTint="#DADADA"
+                    />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/comments_button"
+                style="@style/Headline3_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:layout_marginHorizontal="@dimen/dimen_18"
+                android:text="Fikrlar"
+                android:foreground="?selectableItemBackground"
+                android:drawableEnd="@drawable/arrow_right"
+                android:textColor="?colorOnSurfaceHigh" />
+
+            <include layout="@layout/comments_layout"
+                android:id="@+id/comment_view"
+                android:background="?selectableItemBackground"
+                />
+            <TextView
+                style="@style/Headline3_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_6"
+                android:layout_marginStart="@dimen/dimen_12"
+                android:text="Komment qoldirish"
+                android:id="@+id/fikr_qoldirish"
+                android:textColor="?colorPrimary" />
+
+            <TextView
+                android:id="@+id/qismlar_title_view"
+                style="@style/Title3_17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_margin="@dimen/dimen_12"
+                android:layout_marginBottom="@dimen/dimen_8"
+                android:text="Qismlar"
+                android:textColor="?colorOnSurfaceHigh" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/parts_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:clipToPadding="false"
+                android:visibility="gone"
+                android:paddingBottom="@dimen/dimen_12"
+                android:nestedScrollingEnabled="false"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/book_item_medium" />
+
+            <TextView
+                android:id="@+id/mundarija_title"
+                style="@style/Headline3_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/dimen_12"
+                android:layout_marginHorizontal="@dimen/dimen_12"
+                android:text="Mundarija"
+                android:textColor="?colorOnSurfaceHigh" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mundarija_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:paddingVertical="@dimen/dimen_2"
+                android:clipToPadding="false"
+                android:background="?attr/colorSurface"
+                android:nestedScrollingEnabled="false"
+                tools:itemCount="6"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/mundarija_item" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="@dimen/dimen_2"
+                android:background="?colorBackground" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

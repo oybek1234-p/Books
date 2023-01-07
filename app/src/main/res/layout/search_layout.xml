@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?colorSurface"
+        android:paddingVertical="@dimen/dimen_10"
+        android:elevation="@dimen/dimen_4"
+        android:foreground="?selectableItemBackground"
+        android:paddingHorizontal="@dimen/dimen_18"
+        tools:ignore="MissingDefaultResource">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingVertical="@dimen/dimen_8"
+            android:paddingHorizontal="@dimen/dimen_12"
+            style="@style/Text1_16"
+            android:text="Qidirish"
+            android:drawablePadding="@dimen/dimen_18"
+            android:background="@drawable/radius_12"
+            android:backgroundTint="?colorBackground"
+            android:textColor="?colorOnSurfaceLow"
+            app:drawableLeftCompat="@drawable/ic_search"
+            app:drawableTint="?colorOnSurfaceLow" />
+    </FrameLayout>
+</layout>

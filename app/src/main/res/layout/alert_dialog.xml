@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="data"
+            type="com.uz.kitoblar.ui.components.actionBar.Alert" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/dimen_24"
+        android:background="@drawable/radius_12"
+        android:paddingTop="@dimen/dimen_20"
+        android:backgroundTint="?colorSurface"
+        android:paddingBottom="@dimen/dimen_18"
+        >
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.uz.kitoblar.ui.fragments.ImageViewLoader
+                android:id="@+id/icon_view"
+                android:layout_marginEnd="@dimen/dimen_18"
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_bookmark"
+                android:maxWidth="@dimen/dimen_48"
+                android:maxHeight="@dimen/dimen_48"
+                android:visibility="gone"
+                android:paddingEnd="@dimen/dimen_12"
+                android:layout_height="wrap_content"
+                android:padding="@{data.isPhoto ? 0 : 24}"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/circleImageViewStyle" />
+
+            <TextView
+                android:textColor="?colorOnSurfaceHigh"
+                style="@style/Title2_20"
+                android:id="@+id/title_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{data.title}"
+                app:layout_constraintStart_toEndOf="@+id/icon_view"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Are you sure to delete?" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/description_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8"
+            android:text="@{data.message}"
+            style="@style/Text1_16"
+            android:textColor="?colorOnSurfaceMedium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            tools:text="Do you realy want to delete this product,it will be removed from list" />
+
+        <TextView
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:textColor="?colorOnSurfaceLow"
+            style="@style/Headline3_15"
+            android:layout_marginEnd="@dimen/dimen_28"
+            android:text="@{data.cancelName}"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toBottomOf="@+id/action_button"
+            app:layout_constraintEnd_toStartOf="@+id/action_button"
+            app:layout_constraintTop_toTopOf="@+id/action_button"
+            tools:text="CANCEL" />
+
+        <TextView
+            android:id="@+id/action_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_24"
+            android:textColor="?colorPrimary"
+            style="@style/Headline3_15"
+            android:textAllCaps="true"
+            android:text="@{data.actionName}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description_view"
+            tools:text="DELETE PRODUCT" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

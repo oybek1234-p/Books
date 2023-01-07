@@ -1,0 +1,59 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Books" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#0088CC</item>
+        <item name="colorPrimaryVariant">#426EF2</item>
+
+        <item name="colorSecondary">#90C519</item>
+
+        <item name="colorSurface">#FFFFFF</item>
+
+        <item name="colorBackground">#C8F1F1F1</item>
+        <item name="colorOnBackground">#DCDCDC</item>
+
+        <item name="error">#B00020</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="colorOnSecondary">#000000</item>
+
+        <item name="colorOnPrimaryHigh">#FFFFFF</item>
+        <item name="colorOnPrimaryMedium">#F8F3FF</item>
+        <item name="colorOnPrimaryLow">#57FFFFFF</item>
+
+        <item name="colorOnSurfaceHigh">#292929</item>
+        <item name="colorOnSurfaceMedium">#636161</item>
+        <item name="colorOnSurfaceLow">#9b9b9b</item>
+    </style>
+
+    <style name="circleImageViewStyle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20%</item>
+    </style>
+
+    <style name="EditTextRadius" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusBottomEnd">@dimen/dimen_12</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/dimen_12</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/dimen_12</item>
+        <item name="boxCornerRadiusTopStart">@dimen/dimen_12</item>
+        <item name="android:textColorHint">?colorOnSurfaceLow</item>
+    </style>
+    <style name="AppStarting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_book_splash</item>
+        <item name="postSplashScreenTheme">@style/Theme.Books</item>
+    </style>
+
+    <style name="Theme.Books.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Books.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.Books.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="BottomSheetAppearance">
+    <item name="cornerSizeTopRight">18dp</item>
+    <item name="cornerSizeTopLeft">18dp</item>
+    <item name="android:padding">0dp</item>
+    <item name="android:layout_margin">0dp</item>
+    </style>
+</resources>

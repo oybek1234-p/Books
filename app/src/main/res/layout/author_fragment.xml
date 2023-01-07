@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.uz.kitoblar.ui.fragments.ImageViewLoader
+            android:id="@+id/photo_view"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/dimen_12"
+            android:background="@drawable/oval_drawable"
+            android:backgroundTint="?colorBackground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name_view"
+            style="@style/Headline2_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Robert Kiyosaki"
+            android:layout_marginTop="@dimen/dimen_8"
+            android:layout_marginStart="@dimen/dimen_12"
+            android:textColor="?colorOnSurfaceHigh"
+            app:layout_constraintStart_toEndOf="@+id/photo_view"
+            app:layout_constraintTop_toTopOf="@+id/photo_view" />
+
+        <TextView
+            android:id="@+id/info_view"
+            style="@style/Caption2_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sotuvchi"
+            app:layout_constraintStart_toStartOf="@+id/name_view"
+            app:layout_constraintTop_toBottomOf="@+id/name_view" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dimen_12"
+            android:background="?colorBackground"
+            app:layout_constraintTop_toBottomOf="@+id/photo_view" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="3"
+            android:paddingEnd="@dimen/dimen_8"
+            android:paddingTop="@dimen/dimen_12"
+            tools:listitem="@layout/book_item_medium"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="42dp"
+            android:indeterminateTint="?colorOnSurfaceLow"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/empty_view"
+            style="@style/Headline1_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kitoblar topilmadi"
+            android:textColor="?colorOnSurfaceLow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

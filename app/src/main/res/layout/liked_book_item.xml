@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="@dimen/dimen_12"
+        android:layout_marginTop="@dimen/dimen_4"
+        android:layout_width="match_parent"
+        android:background="?colorSurface"
+        android:layout_height="wrap_content">
+
+        <com.uz.kitoblar.ui.fragments.ImageViewLoader
+            android:id="@+id/photo_view"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:background="?colorBackground"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="1:1.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name_view"
+            style="@style/Text1_16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_18"
+            android:text="Savdogar"
+            android:textColor="?colorOnSurfaceHigh"
+            app:layout_constraintEnd_toStartOf="@+id/options_view"
+            app:layout_constraintStart_toEndOf="@+id/photo_view"
+            app:layout_constraintTop_toTopOf="@+id/photo_view" />
+
+        <TextView
+            android:id="@+id/info_view"
+            style="@style/Subtitle1_14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:lineSpacingExtra="@dimen/dimen_6"
+            android:visibility="gone"
+            android:text="Robert Kiyosaki 4.2"
+            android:textColor="?colorOnSurfaceMedium"
+            app:layout_constraintEnd_toStartOf="@+id/options_view"
+            app:layout_constraintStart_toStartOf="@+id/name_view"
+            app:layout_constraintTop_toBottomOf="@+id/name_view" />
+
+        <ImageView
+            android:id="@+id/options_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/more_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="@dimen/dimen_6"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?selectableItemBackground"
+            app:layout_constraintTop_toTopOf="@+id/name_view"
+            app:tint="?colorOnSurfaceLow" />
+
+        <TextView
+            android:id="@+id/about_view"
+            style="@style/Text1_14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dimen_8"
+            android:maxLines="2"
+            android:text="rfjii4iof4iof"
+            android:textColor="?colorOnSurfaceLow"
+            app:layout_constraintEnd_toEndOf="@+id/name_view"
+            app:layout_constraintStart_toStartOf="@+id/name_view"
+            app:layout_constraintTop_toBottomOf="@+id/name_view" />
+
+        <TextView
+            android:id="@+id/share_view"
+            style="@style/Caption2_12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:clickable="true"
+            android:drawableTop="@drawable/ic_reshare"
+            android:drawablePadding="@dimen/dimen_6"
+            android:focusable="true"
+            android:foreground="?selectableItemBackground"
+            android:gravity="center"
+            android:paddingVertical="@dimen/dimen_8"
+            android:stateListAnimator="@animator/item_press"
+            android:text="Ulashish"
+            android:textColor="?colorOnSurfaceMedium"
+            app:drawableTint="?colorOnSurfaceLow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

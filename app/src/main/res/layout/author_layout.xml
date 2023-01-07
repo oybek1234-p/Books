@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="?selectableItemBackground"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true">
+
+    <com.uz.kitoblar.ui.fragments.ImageViewLoader
+        android:id="@+id/photo_view"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:backgroundTint="?colorBackground"
+        android:background="@drawable/oval_drawable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name_view"
+        style="@style/Text2_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Said ahmad"
+        android:textColor="?colorOnSurfaceHigh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/photo_view"
+        app:layout_constraintTop_toTopOf="@+id/photo_view" />
+
+    <TextView
+        android:id="@+id/subtitle_view"
+        style="@style/Subtitle1_14"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:text="4 kitob * 5.4 reyting"
+        android:textColor="?colorOnSurfaceLow"
+        app:layout_constraintStart_toStartOf="@+id/name_view"
+        app:layout_constraintTop_toBottomOf="@+id/name_view" />
+</androidx.constraintlayout.widget.ConstraintLayout>

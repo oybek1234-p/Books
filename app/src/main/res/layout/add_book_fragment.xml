@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_18"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Title3_17"
+                android:textColor="?colorOnSurfaceHigh"
+                android:text="Kitob nomi"
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/EditTextRadius"
+                android:id="@+id/name_view"
+                app:hintEnabled="false"
+                android:layout_marginTop="@dimen/dimen_6"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Masalan: Ufq" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Title3_17"
+                android:textColor="?colorOnSurfaceHigh"
+                android:layout_marginTop="@dimen/dimen_24"
+                android:text="Avtor ismi"
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/EditTextRadius"
+                android:id="@+id/author_name_view"
+                app:hintEnabled="false"
+                android:layout_marginTop="@dimen/dimen_6"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Masalan: Said Ahmad"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Title3_17"
+                android:textColor="?colorOnSurfaceHigh"
+                android:text="Kitob haqida"
+                android:layout_marginTop="@dimen/dimen_24"
+                />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/EditTextRadius"
+                app:hintEnabled="false"
+                android:layout_marginTop="@dimen/dimen_6"
+                android:id="@+id/about_view"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:hint="Msln: Eng sara asarlardan biri"
+                    android:minHeight="120dp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/part_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Title3_17"
+                android:drawablePadding="@dimen/dimen_12"
+                android:visibility="gone"
+                android:textColor="?colorOnSurfaceHigh"
+                android:layout_marginTop="@dimen/dimen_24"
+                android:text="Qism" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/EditTextRadius"
+                android:visibility="gone"
+                android:id="@+id/part_edit_text"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nechinchi qism?"
+                    android:inputType="numberDecimal"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Title3_17"
+                android:textColor="?colorOnSurfaceHigh"
+                android:text="Rasm (Kitobning yuzi)"
+                android:layout_marginTop="@dimen/dimen_24"
+                />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/dimen_8"
+                    >
+                    <com.uz.kitoblar.ui.fragments.ImageViewLoader
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:id="@+id/photo_view"
+                        android:background="@drawable/radius_12"
+                        android:backgroundTint="?colorBackground"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/add_photo_ic"
+                        android:padding="38dp"
+                        />
+                    <ProgressBar
+                        android:layout_width="35dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/photo_progress_view"
+                        android:layout_margin="@dimen/dimen_8"
+                        android:visibility="gone"
+                        />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/photo_edit"
+                        android:src="@drawable/ic_edit"
+                        android:padding="@dimen/dimen_8"
+                        android:layout_margin="@dimen/dimen_18"
+                        app:tint="?colorPrimary" />
+
+                </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Title3_17"
+                android:textColor="?colorOnSurfaceHigh"
+                android:text="Kategoriya"
+                android:layout_marginTop="@dimen/dimen_24"
+                />
+
+            <include
+                android:id="@+id/category_view"
+                layout="@layout/info_lay_big"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Title3_17"
+                android:textColor="?colorOnSurfaceHigh"
+                android:text="Narxlar"
+                android:layout_marginTop="@dimen/dimen_24"
+                />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/dimen_12"
+                    android:nestedScrollingEnabled="false"
+                    android:id="@+id/price_list_view"
+                    tools:listitem="@layout/info_value_item"
+                    tools:itemCount="3"
+                    />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:id="@+id/add_price_button"
+                android:text="Narx qo'shish"
+                android:gravity="center"
+                style="@style/Text2_15"
+                android:textAllCaps="true"
+                android:background="@drawable/radius_12"
+                android:backgroundTint="?colorPrimary"
+                android:textColor="?colorOnPrimaryHigh"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Title3_17"
+                android:drawablePadding="@dimen/dimen_12"
+                android:textColor="?colorOnSurfaceHigh"
+                android:layout_marginTop="@dimen/dimen_24"
+                android:text="Pdf url"
+                app:drawableLeftCompat="@drawable/ic_pdf" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/EditTextRadius"
+                android:id="@+id/pdf_view"
+                app:hintEnabled="false"
+                android:layout_marginTop="@dimen/dimen_6"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Msln - kitob.pdf"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Title3_17"
+                android:textColor="?colorOnSurfaceHigh"
+                android:layout_marginTop="@dimen/dimen_24"
+                android:text="Ovozli url"
+                android:drawablePadding="@dimen/dimen_8"
+                app:drawableLeftCompat="@drawable/ic_headphone" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/EditTextRadius"
+                app:hintEnabled="false"
+                android:layout_marginTop="@dimen/dimen_6"
+                android:id="@+id/music_view"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Msln - ovozli.mp3"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Title3_17"
+                android:textColor="?colorOnSurfaceHigh"
+                android:layout_marginTop="@dimen/dimen_24"
+                android:text="You tube url"
+                android:drawablePadding="@dimen/dimen_8"
+                app:drawableLeftCompat="@drawable/ic_headphone" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/EditTextRadius"
+                app:hintEnabled="false"
+                android:layout_marginTop="@dimen/dimen_6"
+                android:id="@+id/you_tube_view"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Url"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <ProgressBar
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/progress_bar"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen_8"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/dimen_12"
+                android:gravity="center"
+                style="@style/Headline2_16"
+                android:textColor="?colorOnPrimaryHigh"
+                android:text="Yuklash"
+                android:background="@drawable/radius_12"
+                android:backgroundTint="?colorSecondary"
+                android:id="@+id/upload"
+                android:layout_marginTop="@dimen/dimen_24"
+                />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/books"
+    android:icon="@drawable/book_icon"
+    android:title="Kitoblar"
+    />
+    <item
+        android:id="@+id/reading"
+        android:icon="@drawable/book_reading"
+        android:title="O'qilyotganlar"
+        />
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/profile_icon"
+        android:title="Profil"
+        />
+</menu>

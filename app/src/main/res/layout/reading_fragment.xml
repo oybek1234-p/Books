@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="?colorBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView14"
+            tools:itemCount="4"
+            tools:layout_editor_absoluteX="0dp"
+            tools:listitem="@layout/user_book_item" />
+
+        <include
+            android:id="@+id/empty_view"
+            layout="@layout/emty_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/likes_button"
+            android:layout_width="@dimen/dimen_48"
+            android:layout_height="@dimen/dimen_48"
+            android:elevation="@dimen/dimen_18"
+            android:padding="@dimen/dimen_12"
+            android:foreground="?selectableItemBackground"
+            android:src="@drawable/outline_favorite_24"
+            app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="?colorOnSurfaceLow" />
+
+
+        <ImageView
+            android:id="@+id/add_book_botton"
+            android:layout_width="@dimen/dimen_48"
+            android:layout_height="@dimen/dimen_48"
+            android:visibility="gone"
+            android:elevation="@dimen/dimen_18"
+            android:foreground="?selectableItemBackground"
+            android:padding="@dimen/dimen_12"
+            android:src="@drawable/ic_add_box"
+            app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+            app:layout_constraintEnd_toStartOf="@+id/likes_button"
+            app:tint="?colorOnSurfaceMedium" />
+
+        <TextView
+            android:id="@+id/textView14"
+            style="@style/Title2_20"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+
+            android:background="?colorSurface"
+            android:elevation="@dimen/dimen_12"
+            android:gravity="center"
+            android:paddingTop="@dimen/dimen_24"
+            android:text="Kutubxona"
+            android:textColor="?colorOnSurfaceHigh"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

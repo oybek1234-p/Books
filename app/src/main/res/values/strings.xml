@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Books</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="ismingiz">Ismingiz</string>
+    <string name="email">Email</string>
+    <string name="parol">Parol</string>
+    <string name="sotuchi_bo_lish_uchun">Sotuchi bo\'lish uchun</string>
+    <string name="kitob_yuklash_url">https://image.shutterstock.com/image-illustration/office-folders-neon-lighting-closeup-260nw-1925795876.jpg</string>
+    <string name="create_book_url_photo">https://offtheshelf.com/app/uploads/2019/12/20-authors-2020_soc.jpg</string>
+    <string name="avtor_huquqi">Mualliflik huquqi, intellektual mulk huquqining bir shakli bo\'lib, she\'rlar, romanlar, filmlar, qo\'shiqlar, kompyuter dasturlari va arxitektura kabi adabiy, dramatik, musiqiy va badiiy asarlarni o\'z ichiga olgan asl mualliflik asarlarini himoya qiladi.</string>
+    <string name="avtor_huquqi_sharti">Kitob sotayotganingizda avtor huquqini korsatishingiz shart, bu sertifikat yoki rasm balki dokument ko\'rinishida bo\'lishi mumkin. Agar kirob bu huquq sizda bo\'lmasa kitob avtoridan so\'rashingiz lozim</string>
+    <string name="kitob_yuklash">Kitob formati pdf yoki ovoz(mp3) formatida bo\'lishi mumkin. Yuklash uchun file url ishlatishingiz kerak.</string>
+    <string name="davom_etish">Davom etish</string>
+    <string name="boy_ota_kambagal_ota">Boy ota kambagal ota</string>
+    <string name="kitob_tur_tanlang">Kitob turini tanlang</string>
+    <!-- Strings used for fragments for navigation -->
+
+    <!-- Strings related to login -->
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>

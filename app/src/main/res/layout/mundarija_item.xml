@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="1dp"
+        android:background="?colorSurface"
+        android:foreground="?selectableItemBackground"
+        android:paddingHorizontal="@dimen/dimen_12"
+        android:paddingVertical="@dimen/dimen_12"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text_view"
+            style="@style/Text1_16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Islom va iymon shartlari"
+            android:textColor="?colorOnSurfaceHigh"
+            app:layout_constraintEnd_toStartOf="@+id/info_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/info_view"
+            style="@style/Subtitle2_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14-bet"
+            android:textColor="?colorOnSurfaceHigh"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/delete_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delete"
+            android:visibility="gone"
+            android:layout_marginEnd="@dimen/dimen_24"
+            app:layout_constraintEnd_toEndOf="@+id/text_view"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#FF5555" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

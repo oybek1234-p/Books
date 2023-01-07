@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_4"
+        android:background="?colorSurface"
+        android:foreground="?selectableItemBackground"
+        android:paddingHorizontal="@dimen/dimen_12"
+        android:paddingVertical="@dimen/dimen_8">
+
+        <com.uz.kitoblar.ui.fragments.ImageViewLoader
+            android:id="@+id/imageViewLoader"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:background="?colorBackground"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="1:1.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title_view"
+            style="@style/Headline2_16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_12"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="The best book ever sold in the world - But it right now"
+            android:textColor="?colorOnSurfaceHigh"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.083"
+            app:layout_constraintStart_toEndOf="@+id/imageViewLoader"
+            app:layout_constraintTop_toTopOf="@+id/imageViewLoader" />
+
+        <TextView
+            android:id="@+id/info_view"
+            style="@style/Text1_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:text="156 ko'rganlar - Fantastika"
+            android:textColor="?colorOnSurfaceMedium"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/title_view"
+            app:layout_constraintTop_toBottomOf="@+id/author_name_view" />
+
+        <TextView
+            android:id="@+id/author_name_view"
+            style="@style/Subtitle2_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:text="Said ahmad"
+            android:textColor="?colorOnSurfaceMedium"
+            app:layout_constraintStart_toStartOf="@+id/info_view"
+            app:layout_constraintTop_toBottomOf="@+id/title_view" />
+
+        <TextView
+            android:id="@+id/about_view"
+            style="@style/Text2_15"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingTop="@dimen/dimen_4"
+            android:paddingEnd="@dimen/dimen_24"
+            android:text="erfifjrio4"
+            android:textColor="?colorOnSurfaceLow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/author_name_view"
+            app:layout_constraintTop_toBottomOf="@+id/author_name_view"
+            app:layout_constraintVertical_bias="0.125" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

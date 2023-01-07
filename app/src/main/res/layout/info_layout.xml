@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="?colorSurface"
+      >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:id="@+id/icon_view"
+            android:src="@drawable/profile_icon"
+            android:layout_marginStart="@dimen/dimen_2"
+            android:padding="@dimen/dimen_10"
+            app:tint="?colorOnSurfaceMedium" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_view"
+            style="@style/Text1_16"
+            android:textColor="?colorOnSurfaceHigh"
+            android:text="Change profile"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/dimen_12" />
+    </LinearLayout>
+</layout>

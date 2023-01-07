@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?colorBackground">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dimen_12">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/top_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?colorSurface"
+                android:elevation="1dp"
+                android:paddingBottom="@dimen/dimen_24">
+
+                <TextView
+                    android:id="@+id/phone_view"
+                    style="@style/Text2_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_4"
+                    android:text="+998 97 777 77 77"
+                    android:textColor="?colorOnSurfaceLow"
+                    app:layout_constraintEnd_toEndOf="@+id/name_view"
+                    app:layout_constraintStart_toStartOf="@+id/name_view"
+                    app:layout_constraintTop_toBottomOf="@+id/name_view"
+                    app:layout_goneMarginTop="8dp" />
+                <ImageView
+                    android:id="@+id/back_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_24"
+                    android:background="@drawable/oval_drawable"
+                    android:backgroundTint="?colorBackground"
+                    android:elevation="0.5dp"
+                    android:padding="@dimen/dimen_8"
+                    android:src="@drawable/arrow_back"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="?colorOnSurfaceLow" />
+
+                <com.uz.kitoblar.ui.fragments.ImageViewLoader
+                    android:id="@+id/photo_view"
+                    style="@style/circleImageViewStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="100dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/edit_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:background="@drawable/oval_drawable"
+                    android:backgroundTint="?colorBackground"
+                    android:padding="@dimen/dimen_8"
+                    android:src="@drawable/add_photo_ic"
+                    app:layout_constraintBottom_toBottomOf="@+id/photo_view"
+                    app:layout_constraintStart_toEndOf="@+id/photo_view"
+                    app:layout_constraintTop_toTopOf="@+id/photo_view"
+                    app:tint="?colorOnSurfaceMedium" />
+
+                <ImageView
+                    android:id="@+id/edit_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_24"
+                    android:padding="@dimen/dimen_8"
+                    android:background="@drawable/oval_drawable"
+                    android:backgroundTint="?colorBackground"
+                    android:src="@drawable/ic_edit"
+                    app:layout_constraintBottom_toBottomOf="@+id/name_view"
+                    app:layout_constraintStart_toEndOf="@+id/name_view"
+                    app:layout_constraintTop_toTopOf="@+id/name_view"
+                    app:tint="?colorOnSurfaceMedium" />
+
+                <TextView
+                    android:id="@+id/name_view"
+                    style="@style/Title2_20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_12"
+                    android:text="Oybek Qodirov"
+                    android:textColor="?colorOnSurfaceHigh"
+                    app:layout_constraintEnd_toEndOf="@+id/photo_view"
+                    app:layout_constraintStart_toStartOf="@+id/photo_view"
+                    app:layout_constraintTop_toBottomOf="@+id/photo_view" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    style="@style/Subtitle2_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_12"
+                    android:text="1 level"
+                    android:padding="@dimen/dimen_8"
+                    android:visibility="gone"
+                    android:background="#EBF7FF"
+                    android:textColor="@color/blue"
+                    app:layout_constraintEnd_toEndOf="@+id/phone_view"
+                    app:layout_constraintStart_toStartOf="@+id/phone_view"
+                    app:layout_constraintTop_toBottomOf="@+id/phone_view" />
+
+                <ImageView
+                    android:id="@+id/action_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_24"
+                    android:background="@drawable/oval_drawable"
+                    android:backgroundTint="?colorBackground"
+                    android:elevation="0.5dp"
+                    android:padding="@dimen/dimen_4"
+                    android:src="@drawable/more_icon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="?colorOnSurfaceMedium" />
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="@dimen/dimen_2"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/photo_view"
+                    app:layout_constraintEnd_toEndOf="@+id/photo_view"
+                    app:layout_constraintStart_toStartOf="@+id/photo_view"
+                    app:layout_constraintTop_toTopOf="@+id/photo_view" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</layout>
